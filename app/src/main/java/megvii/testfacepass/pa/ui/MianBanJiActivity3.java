@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.Typeface;
@@ -103,6 +104,7 @@ import butterknife.OnClick;
 import io.objectbox.Box;
 import megvii.testfacepass.pa.MyApplication;
 import megvii.testfacepass.pa.R;
+import megvii.testfacepass.pa.beans.AddFacesBean;
 import megvii.testfacepass.pa.beans.BaoCunBean;
 import megvii.testfacepass.pa.beans.DaKaBean;
 import megvii.testfacepass.pa.beans.HuiFuBean;
@@ -329,7 +331,7 @@ public class MianBanJiActivity3 extends Activity implements CameraManager.Camera
                 paAccessControl.setLogEnable(false);
                 initFaceConfig();
                paAccessDetectConfig=paAccessControl.getPaAccessDetectConfig();
-                Log.d("MianBanJiActivity3", "paAccessControl:" + paAccessControl);
+
             } catch (Exception e) {
                 Log.d("MianBanJiActivity3", e.getMessage() + "初始化失败");
                 return;
@@ -2299,6 +2301,11 @@ public class MianBanJiActivity3 extends Activity implements CameraManager.Camera
                                 String message = new String(body, StandardCharsets.UTF_8);
                                 System.out.println("MianBanJiActivity3 [x] Received '" + envelope.getRoutingKey() + "':'" + message + "'");
                                 //MianBanJiActivity3 [x] Received 'f72746ae706705ac7f5b59190b8825a9':'{"method":"sync-person","person_list":["Member_18356015"],"path":"http://113.92.35.143:9001/person-list","notify":"http://113.92.35.143:9001/person-notify","params":{"Hid":"","Ids":["Member_18356015"]}}'
+                                JsonObject jsonObject = GsonUtil.parse(message).getAsJsonObject();
+                                Gson gson = new Gson();
+                                AddFacesBean addFacesBean = gson.fromJson(jsonObject, AddFacesBean.class);
+
+
                             }
                         };
                         channel.basicConsume(logingBean.getRabbitmq().getQueue(), true, consumer);
