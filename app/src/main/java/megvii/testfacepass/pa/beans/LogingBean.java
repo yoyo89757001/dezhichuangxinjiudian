@@ -262,6 +262,31 @@ public class LogingBean {
             public void setArguments(Object arguments) {
                 this.arguments = arguments;
             }
+
+            @Override
+            public String toString() {
+                return "ExchangeBean{" +
+                        "name='" + name + '\'' +
+                        ", type='" + type + '\'' +
+                        ", passive=" + passive +
+                        ", durable=" + durable +
+                        ", auto_delete=" + auto_delete +
+                        ", arguments=" + arguments +
+                        '}';
+            }
+        }
+
+        @Override
+        public String toString() {
+            return "RabbitmqBean{" +
+                    "host='" + host + '\'' +
+                    ", port=" + port +
+                    ", vhost='" + vhost + '\'' +
+                    ", login='" + login + '\'' +
+                    ", password='" + password + '\'' +
+                    ", queue='" + queue + '\'' +
+                    ", exchange=" + exchange +
+                    '}';
         }
     }
 }

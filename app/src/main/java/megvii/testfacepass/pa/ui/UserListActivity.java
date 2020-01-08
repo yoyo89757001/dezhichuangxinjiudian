@@ -76,7 +76,7 @@ public class UserListActivity extends Activity implements UserListAdapter.ItemDe
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String ss=s.toString();
                 if (!ss.equals("")){
-                    subjectLazyList=subjectBox.query().contains(Subject_.name,ss)
+                    subjectLazyList=subjectBox.query().contains(Subject_.person_name,ss)
                             .build().findLazy();
                     if (subjectLazyList.size()>0) {
                         adapter.notify();

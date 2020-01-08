@@ -1,8 +1,6 @@
 package megvii.testfacepass.pa.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -116,7 +114,7 @@ public class UserListAdapter extends BaseAdapter {
 
 
 
-        holder.groupNameTv.setText(mGroupNames.get(position).getName());
+        holder.groupNameTv.setText(mGroupNames.get(position).getPerson_name());
         try {
             if (mGroupNames.get(position).getTeZhengMa()!=null){
                 Glide.with(context)

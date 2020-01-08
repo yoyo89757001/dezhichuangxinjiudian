@@ -1,198 +1,119 @@
 package megvii.testfacepass.pa.beans;
 
-import android.view.View;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
-import io.objectbox.annotation.Transient;
+
 
 /**
  * Created by Administrator on 2018/5/31.
  */
 @Entity
-public class Subject implements Comparator<Subject> {
-    public Subject() {
-    }
+public class Subject  {
 
-    public Subject(long id, String sid, String name, String companyId, String companyName, String workNumber, String sex, String phone, String peopleType, String email, String position, int employeeStatus, int isOpen, String remark, String photo, String storeId, String storeName, String entryTime, String birthday, String teZhengMa, String departmentName, int daka, String shijian, View view) {
-        this.id = id;
-        this.sid = sid;
-        this.name = name;
-        this.companyId = companyId;
-        this.companyName = companyName;
-        this.workNumber = workNumber;
-        this.sex = sex;
-        this.phone = phone;
-        this.peopleType = peopleType;
-        this.email = email;
-        this.position = position;
-        this.employeeStatus = employeeStatus;
-        this.isOpen = isOpen;//0是关 1是开
-        this.remark = remark;
-        this.photo = photo;
-        this.storeId = storeId;
-        this.storeName = storeName;
-        this.entryTime = entryTime;
-        this.birthday = birthday;
-        this.teZhengMa = teZhengMa;
-        this.departmentName = departmentName;
-        this.daka = daka;
-        this.shijian = shijian;
-        this.view = view;
+
+    public Subject() {
+
     }
 
     @Id(assignable = true)
-    private long id;
-    private String sid;
-    private String name;// 姓名
-    private String companyId; // 公司ID
-    private String companyName; // 公司名称
-    private String workNumber; // 工号
-    private String sex; // 性别
-    private String phone;// 手机号
-    private String peopleType;// 人员类型
-    private String email;// 电子邮箱
-    private String position; // 职位
-    private int employeeStatus; // 是否在职
-    private int isOpen; // 是否开门  1是关，0是开
-    private String remark;// 备注
-    private String photo;// 照片
-    private String storeId;// 门店ID
-    private String storeName;// 门店名称
-    private String entryTime; // 入职时间
-    private String birthday; // 生日
+    private Long id;
+    private String person_id;
+    private String person_name;
+    private String person_type;
+    private String fingerTemplate;
+    private String id_card;
+    private String ic_card;
+    private String sex;
+    private String birthday;
+    private String start_time;
+    private String end_time;
+    private int count;
+    private String group_id;
+    private String group_name;
+    private String group_type;
     private String teZhengMa;
-    private String departmentName;
-    private int daka;
-    private String shijian;
-    private String displayPhoto;
-    private byte[] txBytes;
-    private int w;
-    private int h;
 
-    public int getW() {
-        return w;
+
+
+    public String getStart_time() {
+        return start_time;
     }
 
-    public void setW(int w) {
-        this.w = w;
+    public void setStart_time(String start_time) {
+        this.start_time = start_time;
     }
 
-    public int getH() {
-        return h;
+    public String getEnd_time() {
+        return end_time;
     }
 
-    public void setH(int h) {
-        this.h = h;
+    public void setEnd_time(String end_time) {
+        this.end_time = end_time;
     }
 
-    public byte[] getTxBytes() {
-        return txBytes;
+    public int getCount() {
+        return count;
     }
 
-    public void setTxBytes(byte[] txBytes) {
-        this.txBytes = txBytes;
+    public void setCount(int count) {
+        this.count = count;
     }
 
-    public String getDisplayPhoto() {
-        return displayPhoto;
-    }
-
-    public void setDisplayPhoto(String displayPhoto) {
-        this.displayPhoto = displayPhoto;
-    }
-
-    public String getShijian() {
-        return shijian;
-    }
-
-    public void setShijian(String shijian) {
-        this.shijian = shijian;
-    }
-
-    public int getDaka() {
-        return daka;
-    }
-
-    public void setDaka(int daka) {
-        this.daka = daka;
-    }
-
-    @Transient
-    private View view;
-
-    public View getView() {
-        return view;
-    }
-
-    public void setView(View view) {
-        this.view = view;
-    }
-
-    public String getDepartmentName() {
-        return departmentName;
-    }
-
-    public void setDepartmentName(String departmentName) {
-        this.departmentName = departmentName;
-    }
-
-    public String getTeZhengMa() {
-        return teZhengMa;
-    }
-
-    public void setTeZhengMa(String teZhengMa) {
-        this.teZhengMa = teZhengMa;
-    }
-
-    public String getSid() {
-        return sid;
-    }
-
-    public void setSid(String sid) {
-        this.sid = sid;
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getPerson_id() {
+        return person_id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPerson_id(String person_id) {
+        this.person_id = person_id;
     }
 
-    public String getCompanyId() {
-        return companyId;
+    public String getPerson_name() {
+        return person_name;
     }
 
-    public void setCompanyId(String companyId) {
-        this.companyId = companyId;
+    public void setPerson_name(String person_name) {
+        this.person_name = person_name;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public String getPerson_type() {
+        return person_type;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+    public void setPerson_type(String person_type) {
+        this.person_type = person_type;
     }
 
-    public String getWorkNumber() {
-        return workNumber;
+    public String getFingerTemplate() {
+        return fingerTemplate;
     }
 
-    public void setWorkNumber(String workNumber) {
-        this.workNumber = workNumber;
+    public void setFingerTemplate(String fingerTemplate) {
+        this.fingerTemplate = fingerTemplate;
+    }
+
+    public String getId_card() {
+        return id_card;
+    }
+
+    public void setId_card(String id_card) {
+        this.id_card = id_card;
+    }
+
+    public String getIc_card() {
+        return ic_card;
+    }
+
+    public void setIc_card(String ic_card) {
+        this.ic_card = ic_card;
     }
 
     public String getSex() {
@@ -203,94 +124,6 @@ public class Subject implements Comparator<Subject> {
         this.sex = sex;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getPeopleType() {
-        return peopleType;
-    }
-
-    public void setPeopleType(String peopleType) {
-        this.peopleType = peopleType;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    public int getEmployeeStatus() {
-        return employeeStatus;
-    }
-
-    public void setEmployeeStatus(int employeeStatus) {
-        this.employeeStatus = employeeStatus;
-    }
-
-    public int getIsOpen() {
-        return isOpen;
-    }
-
-    public void setIsOpen(int isOpen) {
-        this.isOpen = isOpen;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    public String getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
-
-    public String getStoreId() {
-        return storeId;
-    }
-
-    public void setStoreId(String storeId) {
-        this.storeId = storeId;
-    }
-
-    public String getStoreName() {
-        return storeName;
-    }
-
-    public void setStoreName(String storeName) {
-        this.storeName = storeName;
-    }
-
-    public String getEntryTime() {
-        return entryTime;
-    }
-
-    public void setEntryTime(String entryTime) {
-        this.entryTime = entryTime;
-    }
-
     public String getBirthday() {
         return birthday;
     }
@@ -299,42 +132,39 @@ public class Subject implements Comparator<Subject> {
         this.birthday = birthday;
     }
 
-    @Override
-    public int compare(Subject o1, Subject o2) {
-        return o1.getSid().compareTo(o2.getSid());
+
+
+    public String getGroup_id() {
+        return group_id;
     }
 
-    @Override
-    public String toString() {
-        return "Subject{" +
-                "id=" + id +
-                ", sid='" + sid + '\'' +
-                ", name='" + name + '\'' +
-                ", companyId='" + companyId + '\'' +
-                ", companyName='" + companyName + '\'' +
-                ", workNumber='" + workNumber + '\'' +
-                ", sex='" + sex + '\'' +
-                ", phone='" + phone + '\'' +
-                ", peopleType='" + peopleType + '\'' +
-                ", email='" + email + '\'' +
-                ", position='" + position + '\'' +
-                ", employeeStatus=" + employeeStatus +
-                ", isOpen=" + isOpen +
-                ", remark='" + remark + '\'' +
-                ", photo='" + photo + '\'' +
-                ", storeId='" + storeId + '\'' +
-                ", storeName='" + storeName + '\'' +
-                ", entryTime='" + entryTime + '\'' +
-                ", birthday='" + birthday + '\'' +
-                ", teZhengMa='" + teZhengMa + '\'' +
-                ", departmentName='" + departmentName + '\'' +
-                ", daka=" + daka +
-                ", shijian='" + shijian + '\'' +
-                ", displayPhoto='" + displayPhoto + '\'' +
-                ", txBytes=" + Arrays.toString(txBytes) +
-                ", w=" + w +
-                ", h=" + h +
-                ", view=" + view +
-                '}';
+    public void setGroup_id(String group_id) {
+        this.group_id = group_id;
     }
+
+    public String getGroup_name() {
+        return group_name;
+    }
+
+    public void setGroup_name(String group_name) {
+        this.group_name = group_name;
+    }
+
+    public String getGroup_type() {
+        return group_type;
+    }
+
+    public void setGroup_type(String group_type) {
+        this.group_type = group_type;
+    }
+
+    public String getTeZhengMa() {
+        return teZhengMa;
+    }
+
+    public void setTeZhengMa(String teZhengMa) {
+        this.teZhengMa = teZhengMa;
+    }
+
+
 }

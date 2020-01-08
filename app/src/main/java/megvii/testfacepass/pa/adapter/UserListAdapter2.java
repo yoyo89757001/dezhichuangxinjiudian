@@ -99,7 +99,7 @@ public class UserListAdapter2 extends BaseAdapter {
             }
         });
 
-        holder.groupNameTv.setText(mGroupNames.get(position).getName());
+        holder.groupNameTv.setText(mGroupNames.get(position).getPerson_name());
         Bitmap bitmap = null;
         try {
             if (mGroupNames.get(position).getTeZhengMa()!=null){

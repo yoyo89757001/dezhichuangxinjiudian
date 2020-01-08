@@ -317,7 +317,7 @@
     },
     {
       "id": "6:1365004493588084203",
-      "lastPropertyId": "51:7799908312361168319",
+      "lastPropertyId": "53:2246429971905210968",
       "name": "BaoCunBean",
       "properties": [
         {
@@ -515,6 +515,14 @@
         {
           "id": "51:7799908312361168319",
           "name": "shualianhuidiaodizhi"
+        },
+        {
+          "id": "52:5970926026261532747",
+          "name": "jihuodizhi"
+        },
+        {
+          "id": "53:2246429971905210968",
+          "name": "device_name"
         }
       ],
       "relations": []

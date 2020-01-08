@@ -15,7 +15,7 @@ public class BaoCunBean {
     private int port;//端口
     private String zhujiDiZhi;
     private int moban;
-    private String tuisongDiZhi; //用来存信鸽token
+    private String tuisongDiZhi; //用来存设备唯一标识
     private String gonggao;
     private boolean isShowMoshengren;
     private boolean isShowShiPingLiu;
@@ -49,7 +49,7 @@ public class BaoCunBean {
     private String xiaBanTime;
     private int mima;
     private int mima2;
-    private String xgToken;
+    private String xgToken;//存token
     private String jihuoma;
     private String appid;
     private String appkey;
@@ -61,6 +61,15 @@ public class BaoCunBean {
     private String ip;
     private String xuliehao;
     private String jihuodizhi;
+    private String device_name;
+
+    public String getDevice_name() {
+        return device_name;
+    }
+
+    public void setDevice_name(String device_name) {
+        this.device_name = device_name;
+    }
 
     public String getJihuodizhi() {
         return jihuodizhi;

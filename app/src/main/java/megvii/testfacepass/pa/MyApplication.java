@@ -171,15 +171,13 @@ public class MyApplication extends Application implements Application.ActivityLi
 ////                .setBaseOnWidth(false)
 //
 //        //设置屏幕适配逻辑策略类, 一般不用设置, 使用框架默认的就好
-////                .setAutoAdaptStrategy(new AutoAdaptStrategy())
-//        ;
+////                .setAutoAdaptStrategy(new AutoAdaptStrategy();
 //        customAdaptForExternal();
-
 
       BaoCunBean  baoCunBean = mBoxStore.boxFor(BaoCunBean.class).get(123456L);
         if (baoCunBean == null) {
             baoCunBean = new BaoCunBean();
-            baoCunBean.setHoutaiDiZhi("http://113.92.34.168:9001");
+            baoCunBean.setHoutaiDiZhi("http://21n2c53681.iask.in:9001");
             baoCunBean.setJihuodizhi("http://www.inteyeligence.com:8980/front");
             baoCunBean.setId(123456L);
             baoCunBean.setShibieFaceSize(50);
@@ -191,16 +189,15 @@ public class MyApplication extends Application implements Application.ActivityLi
             baoCunBean.setYusu(5);
             baoCunBean.setYudiao(5);
             baoCunBean.setMima2(123456);
-            baoCunBean.setJihuoma("0000-0000-0000-0000-0000");
+            baoCunBean.setJihuoma("1211-9098-8836-4597-2480");
             baoCunBean.setHuoTi(false);
             baoCunBean.setDangqianShiJian("d");
             baoCunBean.setTianQi(false);
             baoCunBean.setTishiyu("欢迎光临");
             baoCunBean.setPort(8090);
-
+            baoCunBean.setDevice_name("默认设备名称");
             mBoxStore.boxFor(BaoCunBean.class).put(baoCunBean);
         }
-
 
         FileDownloader.setupOnApplicationOnCreate(this)
                 .connectionCreator(new FileDownloadUrlConnection
@@ -209,12 +206,9 @@ public class MyApplication extends Application implements Application.ActivityLi
                         .readTimeout(15_000) // set read timeout.
                 ))
                 .commit();
-
     }
 
-  //  public Box<TodayBean> getTodayBeanBox(){
-      //  return todayBeanBox;
-   // }
+
 
     public Box<BenDiJiLuBean> getBenDiJiLuBeanBox(){
         return benDiJiLuBeanBox;
@@ -306,7 +300,6 @@ public class MyApplication extends Application implements Application.ActivityLi
                 //加入的 Activity 将会放弃屏幕适配, 一般用于三方库的 Activity, 详情请看方法注释
                 //如果不想放弃三方库页面的适配, 请用 addExternalAdaptInfoOfActivity 方法, 建议对三方库页面进行适配, 让自己的 App 更完美一点
 //                .addCancelAdaptOfActivity(DefaultErrorActivity.class)
-
                 //为指定的 Activity 提供自定义适配参数, AndroidAutoSize 将会按照提供的适配参数进行适配, 详情请看方法注释
                 //一般用于三方库的 Activity, 因为三方库的设计图尺寸可能和项目自身的设计图尺寸不一致, 所以要想完美适配三方库的页面
                 //就需要提供三方库的设计图尺寸, 以及适配的方向 (以宽为基准还是高为基准?)

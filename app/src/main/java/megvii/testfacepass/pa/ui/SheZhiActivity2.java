@@ -674,16 +674,16 @@ public class SheZhiActivity2 extends Activity {
     }
 
     private void kaiPing() {
-        Intent intent = new Intent();
-        intent.setAction("LYD_SHOW_NAVIGATION_BAR");
-        intent.putExtra("type", 1);
-        this.sendBroadcast(intent);
-        sendBroadcast(new Intent("com.android.internal.policy.impl.showNavigationBar"));
-        sendBroadcast(new Intent("com.android.systemui.statusbar.phone.statusopen"));
-        if (jiqiType==2){//8寸防水面板机
+//        Intent intent = new Intent();
+//        intent.setAction("LYD_SHOW_NAVIGATION_BAR");
+//        intent.putExtra("type", 1);
+//        this.sendBroadcast(intent);
+//        sendBroadcast(new Intent("com.android.internal.policy.impl.showNavigationBar"));
+//        sendBroadcast(new Intent("com.android.systemui.statusbar.phone.statusopen"));
+//        if (jiqiType==2){//8寸防水面板机
             HwitManager.HwitSetShowSystemBar(SheZhiActivity2.this);
             HwitManager.HwitSetDisableSlideShowSysBar(0);
-        }
+     //   }
 
     }
 
