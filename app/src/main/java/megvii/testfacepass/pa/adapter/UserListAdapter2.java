@@ -104,7 +104,7 @@ public class UserListAdapter2 extends BaseAdapter {
         try {
             if (mGroupNames.get(position).getTeZhengMa()!=null){
                 Glide.with(context)
-                        .load(MyApplication.SDPATH3+ File.separator+mGroupNames.get(position).getTeZhengMa()+".png")
+                        .load(MyApplication.SDPATH3+ File.separator+mGroupNames.get(position).getTeZhengMa()+".jpg")
                         .apply(myOptions2)
                         .into(holder.touxiang);
             }

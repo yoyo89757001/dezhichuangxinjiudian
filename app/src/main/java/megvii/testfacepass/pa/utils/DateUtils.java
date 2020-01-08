@@ -86,6 +86,29 @@ public class DateUtils {
         return times;
     }
 
+    /**
+     * 调此方法输入所要转换的时间输入例如（"2014-06-14-16-09-00"）返回时间戳
+     *
+     * @param time
+     * @return
+     */
+    public static String dataOne2(String time) {
+        SimpleDateFormat sdr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",Locale.CHINA);
+        Date date;
+        String times = null;
+        try {
+            date = sdr.parse(time);
+            if (date==null)
+                return "0";
+            long l = date.getTime();
+            times = String.valueOf(l);
+            //times = stf.substring(0, 10);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return times;
+    }
+
     public static String getTimestamp(String time, String type) {
         SimpleDateFormat sdr = new SimpleDateFormat(type, Locale.CHINA);
         Date date;
@@ -215,7 +238,7 @@ public class DateUtils {
     }
 
     public static String tim(String time) {
-        SimpleDateFormat sdr = new SimpleDateFormat("yyyy-MM", Locale.CHINA);
+        SimpleDateFormat sdr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA);
         @SuppressWarnings("unused")
         long lcc = Long.valueOf(time);
 //        int i = Integer.parseInt(time);

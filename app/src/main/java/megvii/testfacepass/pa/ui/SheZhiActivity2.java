@@ -182,7 +182,7 @@ public class SheZhiActivity2 extends Activity {
         if (jiqiType==2){
             DengUT.openLOED8cun();
         }
-        DengUT.openLOED();
+      //  DengUT.openLOED();
         if (baoCunBean.getDangqianChengShi2()!=null){
             chengshi.setText(baoCunBean.getDangqianChengShi2());
         }

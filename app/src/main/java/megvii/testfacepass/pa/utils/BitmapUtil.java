@@ -131,11 +131,9 @@ public class BitmapUtil {
         try {
             if (bitmap != null) {
                 baos = new ByteArrayOutputStream();
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 80, baos);
-
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 90, baos);
                 baos.flush();
                 baos.close();
-
                 byte[] bitmapBytes = baos.toByteArray();
                 result = Base64.encodeToString(bitmapBytes, Base64.DEFAULT);
             }
@@ -349,7 +347,7 @@ public class BitmapUtil {
         try {
             FileOutputStream out = new FileOutputStream(file);
 //            bm.compress(Bitmap.CompressFormat.JPEG, 100, out);
-            bm.compress(Bitmap.CompressFormat.PNG, 100, out);
+            bm.compress(Bitmap.CompressFormat.JPEG, 100, out);
             out.flush();
             out.close();
         } catch (IOException e) {

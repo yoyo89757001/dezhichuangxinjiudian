@@ -51,7 +51,7 @@ public class DengUT {
     public static final String MACFILENAME = "mac.xls";
     public static final String MACUSED = "used";
 
-    public  static boolean isOPEN=false;//默认关的 false
+    public  static boolean isOPEN=true;//默认关的 false
     public  static boolean isOPENGreen=false;//默认关的 false
     public  static boolean isOPENRed=false;//默认关的 false
     public  static boolean isOpenDOR=false;//默认关的 false

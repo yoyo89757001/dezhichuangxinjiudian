@@ -195,6 +195,7 @@ public class MyApplication extends Application implements Application.ActivityLi
             baoCunBean.setTianQi(false);
             baoCunBean.setTishiyu("欢迎光临");
             baoCunBean.setPort(8090);
+            baoCunBean.setDangqianChengShi2("户外防水8寸屏");
             baoCunBean.setDevice_name("默认设备名称");
             mBoxStore.boxFor(BaoCunBean.class).put(baoCunBean);
         }
